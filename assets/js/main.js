@@ -20,20 +20,40 @@ const scrollRevealOption = {
     duration: 1000,
 }
 
-ScrollReveal().reveal(".header__content h1", {
+const scrollRevealOption2 = {
+    distance: "50px",
+    rotate: {
+        x: 0,
+        y: 180,
+        z: 0
+    }
+}
+
+ScrollReveal().reveal(`
+    .header__content h1, 
+    .about__content .section__header`, {
     ...scrollRevealOption,
 });
-ScrollReveal().reveal(".header__content .section__description", {
+ScrollReveal().reveal(`
+    .header__content .section__description, 
+    .about__content .section__description`, {
     ...scrollRevealOption,
     delay: 500,
 });
-ScrollReveal().reveal(".header__content .header__btn", {
+ScrollReveal().reveal(`
+    .header__content .header__btn,
+    .about__content .about__btn`, {
     ...scrollRevealOption,
     delay: 1000,
 });
-ScrollReveal().reveal(".header__image", {
+ScrollReveal().reveal(`.header__image`, {
     ...scrollRevealOption,
     origin: "top",
+    delay: 500,
+    duration: 1000
+});
+ScrollReveal().reveal(`.about__image`, {
+    ...scrollRevealOption2,
     delay: 500,
     duration: 1000
 });
