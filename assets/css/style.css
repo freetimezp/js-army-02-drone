@@ -357,7 +357,32 @@ nav {
     background: transparent;
 }
 
+.banner {
+    background-color: var(--extra-light);
+}
 
+.banner__container {
+    display: grid;
+    gap: 2rem;
+}
+
+.banner__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.banner__card img {
+    max-width: 70px;
+}
+
+.banner__card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
 
 @media (width > 576px) {
     .product__grid {
@@ -370,6 +395,12 @@ nav {
         grid-area: 1/2/2/3;
     }
     .article__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .banner__card {
+        justify-content: flex-start;
+    }
+    .banner__container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -450,6 +481,10 @@ nav {
     }
     .subscribe__content form {
         margin-inline-start: unset;
+    }
+
+    .banner__container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
