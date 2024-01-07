@@ -57,3 +57,8 @@ ScrollReveal().reveal(`.about__image`, {
     delay: 500,
     duration: 1000
 });
+
+ScrollReveal().reveal(`.product__card`, {
+    ...scrollRevealOption,
+    interval: 500,
+});
