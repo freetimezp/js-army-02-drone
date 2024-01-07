@@ -58,7 +58,7 @@ ScrollReveal().reveal(`.about__image`, {
     duration: 1000
 });
 
-ScrollReveal().reveal(`.product__card`, {
+ScrollReveal().reveal(`.product__card, .article__card`, {
     ...scrollRevealOption,
     interval: 500,
 });
